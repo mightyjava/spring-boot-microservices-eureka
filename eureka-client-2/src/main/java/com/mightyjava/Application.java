@@ -28,10 +28,10 @@ public class Application {
 	@RequestMapping("/")
 	public String home() throws JSONException {
 		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("message", "Hello World");
-		jsonObject.put("message-2", new JSONObject(
+		jsonObject.put("message", "Hello World 2");
+		jsonObject.put("message-3", new JSONObject(
 				restTemplate.exchange(
-						"http://localhost:8002/", HttpMethod.GET, null, String.class).getBody()));
+						"http://localhost:8003/", HttpMethod.GET, null, String.class).getBody()));
 		return jsonObject.toString();
 	}
 
